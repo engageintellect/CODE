@@ -1,0 +1,20 @@
+# DISPLAY CURRENT GO PATH
+$ go env GOPATH
+
+# SET NEW GO PATH
+$ go env -w GOPATH=$HOME/projects/go
+
+# SET GO PATH IN ~/.bash_profile and zsh_env
+export GOPATH=$HOME/projects/go
+
+# INSTALL GO PACKAGES
+$ go install test-app
+
+
+# DOWNLOAD AND INSTALL PACKAGES
+$ go get host/example-project
+$ go get github.com/fatih/color
+
+# UPDATE INSTALLED PACKAGED
+$ go get -u github.com/fatih/color
+

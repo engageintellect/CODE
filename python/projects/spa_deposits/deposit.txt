@@ -1,0 +1,5 @@
+['NAME: chang chang DEPOSIT PAID: yes']
+['NAME: Chow Ming DEPOSIT PAID: yes']
+['NAME: Karen Smith DEPOSIT PAID: no']
+['NAME: Jane Smith DEPOSIT PAID: no']
+['NAME: jan smith DEPOSIT PAID: yes']

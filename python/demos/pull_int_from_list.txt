@@ -1,0 +1,2 @@
+NUMBERS: [33, 44, 3]
+WORDS: ['cheese', 'potatoes', 'from', 'gjgj']

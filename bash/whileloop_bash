@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# WHILE LOOP
+while [ EDITOR='nvim' ]
+
+do
+    clear
+    ~/Scripts/colorscripts/dna1
+    sleep 1
+
+done

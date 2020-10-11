@@ -1,0 +1,61 @@
+#+TITLE: Org Mode Basics
+
+* INTRODUCTION
+intro to org-mode in Doom Emacs.
+
+* CODE BLOCK EXAMPLES
+
+** HERE IS AN EXAMPLE OF CODE RUNNING IN ORG-MODE
+
+#+BEGIN_SRC python :results output
+
+msg = "Isn't org mode awesome???"
+
+for x in range(3):
+    print(msg)
+
+#+END_SRC
+
+#+RESULTS:
+
+** BASH, AND MOST OTHER LANGUAGES WORK AS WELL!
+
+#+BEGIN_SRC bash :results output
+echo 'hello org-mode'
+#+END_SRC
+
+#+RESULTS:
+
+** HERE IS A WHOLE PYTHON PROGRAM!
+
+#+BEGIN_SRC python :results output
+# numbers list
+nums = [3,4,6,7,9,2,1]
+
+# sort the numbers
+nums.sort()
+
+# highest/lowest
+highest = nums[-1]
+lowest = nums[-0]
+
+# print it out...
+print(nums)
+print("highest num = " + str(highest))
+print("lowest num = " + str(lowest))
+#+END_SRC
+
+#+RESULTS:
+
+* TABLES
+here is an example of a table...
+|-------+-----------+--------------------|
+| NAME  | BIRTHDAY  | BIRTH PLACE        |
+|-------+-----------+--------------------|
+| Josh  | 9/7/88    | Honolulu, Hawaii   |
+| Jim   | 9/11/2001 | New York, New York |
+| James | 12/25/0   | Isreal             |
+| John  | 6/6/66    | Hell               |
+| Jeff  | 4/2/0     | Cheechland         |
+|-------+-----------+--------------------|
+

@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 
+import subprocess
 import socket
 import threading
 import concurrent.futures
 import colorama
 from colorama import Fore
+subprocess.call('clear', shell=True)
 colorama.init()
 
 print_lock = threading.Lock()
 
 ip = input("Enter IP to scan: ")
+print('\n')
 
 def scan(ip, port):
     scanner = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -25,6 +28,6 @@ def scan(ip, port):
 
 
 with concurrent.futures.ThreadPoolExecutor(max_workers=100) as executor:
-    for port in range(1000):
+    for port in range(3000):
         executor.submit(scan, ip, port + 1)
     

@@ -28,6 +28,7 @@ def portScanner(port):
         pass
     else:
         open_ports.append(port)
+        print(port)
 
 
 def main():

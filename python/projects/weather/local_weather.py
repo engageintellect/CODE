@@ -32,7 +32,9 @@ def getWeather():
     print(location.upper(), "", "\n")
     if sky.status == 'Clear':
         print("Current Conditions:  ", sky.status, " ")
-    if sky.status == 'Clouds':
+    elif sky.status == 'Clouds':
+        print("Current Conditions:  ", sky.status, " ")
+    elif sky.status == 'Haze':
         print("Current Conditions:  ", sky.status, " ")
     print("Condition Details:   ", sky.detailed_status)
     print('\n')

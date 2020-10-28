@@ -5,9 +5,10 @@ import (
 )
 
 type contact struct {
-	name  string
-	phone string
-	email string
+	name      string
+	phone     string
+	email     string
+	fave_food []string
 }
 
 func (x contact) hello() string {
@@ -17,9 +18,10 @@ func (x contact) hello() string {
 
 func main() {
 	p := contact{
-		name:  "josh",
-		phone: "750-6530",
-		email: "jc9361@gmail.com",
+		name:      "josh",
+		phone:     "750-6530",
+		email:     "jc9361@gmail.com",
+		fave_food: []string{"pizza"},
 	}
 
 	r := contact{

@@ -1,43 +1,49 @@
-def mergeSort(alist):
+def mergeSort(arr): 
+    if len(arr) >1: 
+        mid = len(arr)//2 # Finding the mid of the array 
+        L = arr[:mid] # Dividing the array elements  
+        R = arr[mid:] # into 2 halves 
+  
+        mergeSort(L) # Sorting the first half 
+        mergeSort(R) # Sorting the second half 
+  
+        i = j = k = 0
+          
+        # Copy data to temp arrays L[] and R[] 
+        while i < len(L) and j < len(R): 
+            if L[i] < R[j]: 
+                arr[k] = L[i] 
+                i+= 1
+            else: 
+                arr[k] = R[j] 
+                j+= 1
+            k+= 1
+          
+        # Checking if any element was left 
+        while i < len(L): 
+            arr[k] = L[i] 
+            i+= 1
+            k+= 1
+          
+        while j < len(R): 
+            arr[k] = R[j] 
+            j+= 1
+            k+= 1
+  
+# Code to print the list 
+def printList(arr): 
+    for i in range(len(arr)):         
+        print(arr[i], end =" ") 
+    print() 
+  
+def mergeList():
+    a = [33, 4, 77]
+    print(a)
+    msg = int(input('add to list: '))
+    a.append(msg)
+    print(a)
+    print('result')
+    mergeSort(a)
+    printList(a)
 
-   print("Splitting ",alist)
-
-   if len(alist)>1:
-       mid = len(alist)//2
-       lefthalf = alist[:mid]
-       righthalf = alist[mid:]
-
-       #recursion
-       mergeSort(lefthalf)
-       mergeSort(righthalf)
-
-       i=0
-       j=0
-       k=0
-
-       while i < len(lefthalf) and j < len(righthalf):
-           if lefthalf[i] < righthalf[j]:
-               alist[k]=lefthalf[i]
-               i=i+1
-           else:
-               alist[k]=righthalf[j]
-               j=j+1
-           k=k+1
-
-       while i < len(lefthalf):
-           alist[k]=lefthalf[i]
-           i=i+1
-           k=k+1
-
-       while j < len(righthalf):
-           alist[k]=righthalf[j]
-           j=j+1
-           k=k+1
-
-   print("Merging ",alist)
-
-
-
-alist = [54,26,93,17,77,31,44,55,20]
-mergeSort(alist)
-print(alist)
+mergeList()

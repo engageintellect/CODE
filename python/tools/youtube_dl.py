@@ -2,30 +2,35 @@ import os
 import subprocess
 import time
 
-# set download folder/path
 def set_folder():
-    # get username
     usr = os.getcwd()
     usr = usr.replace("/home/", "")
-    
-    # make download folder is not there already.
     path = os.listdir()
-    if 'videos' in path:
-        os.chdir('videos')
-        a = os.listdir()
-        if 'youtube' in a:
-            main()
+    if 'media' in path:
+        os.chdir('media')
+        path = os.listdir()
+        if 'videos' in path:
+            os.chdir('videos')
+            path = os.listdir()
+            if 'youtube' in path:
+                main()
+            else:
+                os.mkdir('youtube')
         else:
+            os.mkdir('videos')
+            os.chdir('videos')
             os.mkdir('youtube')
             main()
     else:
         os.chdir('/home/' + usr)
+        os.mkdir('media')
+        os.chdir('media')
         os.mkdir('videos')
         os.chdir('videos')
         os.mkdir('youtube')
+        os.chdir('youtube')
         main()
 
-# main program
 def main():
     os.system('clear')
     print("                   _         _                    _ _")
@@ -39,7 +44,6 @@ def main():
     # user input
     usr_input = input('ENTER URL: ')
 
-    
     if usr_input == 'q':
         os.system('clear')
         quit()
@@ -54,9 +58,16 @@ def main():
                 os.system('clear')
                 quit()
             if file_type == 'porn':
-                os.chdir('/home/r3dux/videos/.porn/')
+                os.chdir('/home/r3dux/media/videos/')
+                path = os.listdir()
+                if '.porn' in path:
+                    os.chdir('/home/r3dux/media/videos/.porn/')
+                else:
+                    os.mkdir('.porn')
+                    os.chdir('/home/r3dux/media/videos/.porn/')
             else:
-                os.chdir('/home/r3dux/videos/youtube/')
+                os.chdir('youtube')
+            
             print('\n')
 
             # download video

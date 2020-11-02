@@ -3,9 +3,14 @@ import subprocess
 import time
 
 def set_folder():
+    whoami = subprocess.getoutput('whoami')
+    os.getcwd()
+    os.chdir('/home/' + whoami)
+
     usr = os.getcwd()
     usr = usr.replace("/home/", "")
     path = os.listdir()
+    
     if 'media' in path:
         os.chdir('media')
         path = os.listdir()
@@ -16,19 +21,16 @@ def set_folder():
                 main()
             else:
                 os.mkdir('youtube')
+                os.chdir('youtube')
         else:
             os.mkdir('videos')
             os.chdir('videos')
             os.mkdir('youtube')
+            os.chdir('youtube')
             main()
     else:
-        os.chdir('/home/' + usr)
-        os.mkdir('media')
-        os.chdir('media')
-        os.mkdir('videos')
-        os.chdir('videos')
-        os.mkdir('youtube')
-        os.chdir('youtube')
+        os.system('mkdir -p /media/videos/youtube')
+        os.chdir('/media/videos/youtube')
         main()
 
 def main():
@@ -67,6 +69,7 @@ def main():
                     os.chdir('/home/r3dux/media/videos/.porn/')
             else:
                 os.chdir('youtube')
+                
             
             print('\n')
 

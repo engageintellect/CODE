@@ -1,4 +1,4 @@
-
+#! /usr/bin/env python3
 
 class People():
     def __init__(self, name, age, fave_food):
@@ -14,13 +14,14 @@ class People():
 def Get_Info():
     name = input("Enter name: ")
     age = input("Enter age: ")
-    fave_food = []
+    
+    fave_food = [None] * 3
 
     fave_food[0] = input("first fav food: ")
     fave_food[1] = input("2nd fav food: ")
     fave_food[2] = input("3rd fav food: ")
 
-    x = People(name, age, fave_foods)
+    x = People(name, age, fave_food)
     x.display()
 
 

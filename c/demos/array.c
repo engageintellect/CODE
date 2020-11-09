@@ -6,6 +6,7 @@ int main (){
 
     char *names[]={"josh", "james", "ted"};
 
-    printf("%s", *names);
 
+
+    printf("%s", *names);
 }

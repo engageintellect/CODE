@@ -17,7 +17,7 @@ else
     if(pass == "pass"){
         let title = document.write("<h1>JAVASCRIPT SCRATCHPAD</h1>");
 
-        let write = prompt("would you like to write somehting?", "yes / no");
+        let write = prompt("would you like to write something?", "yes / no");
         if (write == "yes"){
             let user_in = prompt("ENTER HEADER TITLE");
             let user_text = document.write("<h1>" + user_in + "</h1>");

@@ -16,6 +16,8 @@ func main() {
 		fmt.Println(x, y)
 	}
 
+	fmt.Println("\n")
+
 	// PRINT MAP ELEMENTS USING KEY
 	fmt.Println(contacts["name"])
 	fmt.Println(contacts["age"])

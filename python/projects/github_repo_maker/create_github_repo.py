@@ -11,14 +11,14 @@ from selenium.webdriver.support import expected_conditions as EC
     # INIT WEB-DRIVER #
     ###################
 
-##=[ headless driver ]=#
-#from selenium.webdriver.chrome.options import Options
-#options = Options()
-#options.add_argument('--headless')
-#driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
+#=[ headless driver ]=#
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.add_argument('--headless')
+driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
 
 #=[ regular driver ]=#
-driver = webdriver.Chrome()
+#driver = webdriver.Chrome()
 
 driver.implicitly_wait(10)
 
@@ -46,11 +46,11 @@ clear_display()
     ###################
 
 ##=[ github account info ]=#
-#username = input("GITHUB USERNAME: ")
-#password = input("GITHUB PASSWORD: ")
+username = input("GITHUB USERNAME: ")
+password = input("GITHUB PASSWORD: ")
 
-username = 'jc9361'
-password = 'evo9gsrSE'
+# username = 'jc9361'
+# password = 'evo9gsrSE'
 
 clear_display()
 

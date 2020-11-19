@@ -4,10 +4,7 @@ import os, subprocess, sys
 
 # OPTIONS
 options = webdriver.ChromeOptions()
-options.add_argument("--ignore-certificate-errors")
-options.add_argument("--test-type")
 options.add_argument("--headless")
-options.binary_location = "/usr/bin/chromium"
 driver = webdriver.Chrome(options=options, 
         executable_path="/usr/bin/chromedriver")
 

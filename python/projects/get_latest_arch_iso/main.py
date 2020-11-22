@@ -43,8 +43,9 @@ except:
 for x in os.listdir():
     if "arch" in x:
         iso_file = x
-os.system(f'mv {iso_file} archlinux.iso')
 
+os.system(f'mv {iso_file} archlinux.iso')
+iso_file = 'archlinux.iso'
 
 print(f"Ready to burn ISO image [{iso_file}] to disk")
 

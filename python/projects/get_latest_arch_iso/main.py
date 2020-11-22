@@ -29,16 +29,24 @@ print('LATEST ARCH ISO HAS BEEN DOWNLOADED')
 
 
 # CLEAN UP
-dir_contents = os.listdir()
-for x in dir_contents:
-    if ".torrent" in x:
-        print(x)
-        subprocess.call(f'rm {x}', shell=True)
-    else:
-        print("ready to burn iso")
+try:
+    dir_contents = os.listdir()
+    for x in dir_contents:
+        if ".torrent" in x:
+            subprocess.call(f'rm {x}', shell=True)
+    
+    os.system('cd /home/r3dux/.config/transmission/torrents && rm *')
+    os.system('cd /home/r3dux/.config/transmission/resume && rm *')
+except:
+    print("no files to clean up... moving on...")
 
-subprocess.call('rm * "/home/r3dux/.config/transmission/torrents"', shell=True)
-subprocess.call('rm * "/home/r3dux/.config/transmission/resume"', shell=True)
+for x in os.listdir():
+    if "arch" in x:
+        iso_file = x
+os.system(f'mv {iso_file} archlinux.iso')
+
+
+print(f"Ready to burn ISO image [{iso_file}] to disk")
 
 
 

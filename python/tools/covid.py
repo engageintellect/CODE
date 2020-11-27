@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import time
 import sys
 
+os.system('clear')
+
     
 # BEAUTIFUL SOUP SCRAPE
 URL = 'https://www.worldometers.info/coronavirus/#countries'

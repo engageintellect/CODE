@@ -23,7 +23,6 @@ for x in dir_contents:
 
 subprocess.call(f'transmission-cli -f "{path}/kill_transmission.sh" {arch_torrent}', shell=True)
 
-
 os.system('clear')
 print('LATEST ARCH ISO HAS BEEN DOWNLOADED')
 
@@ -47,7 +46,32 @@ for x in os.listdir():
 os.system(f'mv {iso_file} archlinux.iso')
 iso_file = 'archlinux.iso'
 
-print(f"Ready to burn ISO image [{iso_file}] to disk")
+print(f"Ready to burn ISO image '{iso_file}' to disk...\n")
+
+print("AVAILABLE DISKS")
+list_dev = subprocess.getoutput('lsblk')
+print(list_dev)
+print("\n")
+print("Enter device to burn ISO image to.")
+print("If the device is not connected, please connect it and enter is path.")
+
+
+dev_input = input("> ")
+if dev_input == 'q':
+    print("Program Terminated."); sleep(1)
+    os.system('clear')
+    quit()
+else:
+    dd_cmd = f'sudo dd if={iso_file} of={dev_input} bs=4M status=progress; sync'
+    os.system(dd_cmd)
+
+
+os.system('clear')
+print('{iso_file} has been written to {dev_input}')
+
+
+
+
 
 
 

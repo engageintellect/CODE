@@ -29,7 +29,6 @@ def main():
         playsound('iphone_alarm_alarm.mp3')
         timer()
 
-
 def display():
     print(" _   _ ")
     print("| |_(_)_ __ ___   ___ _ __ ")

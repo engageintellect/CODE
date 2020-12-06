@@ -104,7 +104,9 @@ else:
 
 #=[ initialize local repository ]=#
 os.system('git init')
+
 # remote add repository
+repo_address = f'https://github.com/{username}/{repo_name}.git'
 os.system(f'git remote add origin {repo_address}\n')
 
 

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 import os
 import sys
 from time import sleep
@@ -29,12 +32,7 @@ driver.implicitly_wait(10)
 
 def clear_display():
     os.system('clear')
-    print(r"         _ _   _           _    ")
-    print(r"    __ _(_) |_| |__  _   _| |__    _ __ ___ _ __   ___    ")
-    print(r"   / _` | | __| '_ \| | | | '_ \  | '__/ _ \ '_ \ / _ \    ")
-    print(r"  | (_| | | |_| | | | |_| | |_) | | | |  __/ |_) | (_) |    ")
-    print(r"   \__, |_|\__|_| |_|\__,_|_.__/  |_|  \___| .__/ \___/    ")
-    print(r"   |___/                                   |_|    ")
+    os.system('figlet github repo')
     print("\n")
 
 clear_display()

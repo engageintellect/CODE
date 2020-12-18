@@ -8,6 +8,8 @@ import subprocess
 from time import sleep
 import speech_recognition as sr
 import pyttsx3
+import pywhatkit
+import datetime
 
 
 assistant_name = 'Alex'
@@ -56,20 +58,32 @@ def run_command():
         print(f'COMMNAD: "{command}"\n')
                 
         if 'search' in command:
-            command = command.replace('search ', '')
-            print(f'Searching for {command}.')
-            talk(f'Searching for {command}.')
-            search = f'$BROWSER "google.com/search?&q={command}"'
+            search_term = command.replace('search ', '')
+            print(f'Searching for {search_term}.')
+            talk(f'Searching for {search_term}.')
+            search = f'$BROWSER "google.com/search?&q={search_term}"'
             os.system(search)
         elif 'go to' in command:
-            command = command.replace("go to ", "")
-            print(f'Opening {command}')
-            talk(f'Opening {command}.')
-            surf = f'$BROWSER {command}.com'
+            site = command.replace("go to ", "")
+            print(f'Opening {site}')
+            talk(f'Opening {site}.')
+            surf = f'$BROWSER {site}.com'
             os.system(surf)
+        elif 'play' in command:
+            song = command.replace('play ', '')
+            talk(f'Playing {song}')
+            pywhatkit.playonyt(song)
         elif 'say' in command:
             command = command.replace('say ', '')
             talk(command)
+
+        elif 'time' in command:
+            time = datetime.datetime.now().strftime('%I:%M %p')
+            talk(f'Current time is {time}')
+            print(time)
+            sleep(2)
+
+
         elif 'email' in command:
             os.system('st -n email -e mutt')
         elif 'code repo' in command:
@@ -92,6 +106,8 @@ def run_command():
             display()
             print(f"You need to say my name, '{assistant_name}' to issue your commnad.")
             talk(f"You need to say my name, '{assistant_name}' to issue your commnad.")
+
+        run_command()
 
 run_command()
 

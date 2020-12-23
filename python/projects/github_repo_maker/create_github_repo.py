@@ -14,14 +14,14 @@ from selenium.webdriver.support import expected_conditions as EC
     # INIT WEB-DRIVER #
     ###################
 
-##=[ headless driver ]=#
-#from selenium.webdriver.chrome.options import Options
-#options = Options()
-#options.add_argument('--headless')
-#driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
+#=[ headless driver ]=#
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.add_argument('--headless')
+driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
 
 #=[ regular driver ]=#
-driver = webdriver.Chrome()
+# driver = webdriver.Chrome()
 
 driver.implicitly_wait(10)
 

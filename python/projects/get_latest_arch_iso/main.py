@@ -3,9 +3,11 @@ import subprocess, os, sys
 from time import sleep
 from selenium import webdriver
 
+full_path = str(os.getcwd())
+
 
 # WEB DRIVER INIT / GO-TO ARCH WEBSITE
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(executable_path='/usr/bin/chromedriver')
 driver.get("https://archlinux.org/download")
 
 
@@ -16,6 +18,7 @@ sleep(3)
 driver.close()
 
 
+
 # GET USER AND PATH INFO / CHDIR INTO DOWNLOADS FOLDER
 usr = subprocess.getoutput("echo $USER")
 path = str(os.getcwd())
@@ -24,6 +27,7 @@ os.chdir(f'/home/{usr}/downloads')
 
 # ITERATE OVER FOLDER TO FIND TORRENT FILE
 dir_contents = os.listdir()
+
 for x in dir_contents:
     if "archlinux" in x:
         print(x)
@@ -32,7 +36,7 @@ for x in dir_contents:
 
 # SEND TORRENT TO TRANSMISSION-CLI TO DOWNLOAD
 # KILL TRANSMISSION WHEN FINISHED
-subprocess.call(f'transmission-cli -f "{path}/kill_transmission.sh" {arch_torrent}', shell=True)
+subprocess.call(f'transmission-cli -f "kill_transmission.sh" {arch_torrent}', shell=True)
 os.system('clear')
 print('LATEST ARCH ISO HAS BEEN DOWNLOADED')
 
@@ -52,6 +56,8 @@ except:
 
 # FIND DOWNLOADED ISO
 for x in os.listdir():
+    print(x)
+    quit()
     if "arch" in x:
         iso_file = str(x)
 

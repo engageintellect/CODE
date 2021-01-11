@@ -44,13 +44,14 @@ clear_display()
     ###################
 
 ##=[ github account info ]=#
-# username = input("GITHUB USERNAME: ")
-# password = input("GITHUB PASSWORD: ")
-
 user = subprocess.getoutput("echo $USER")
 local_path = os.environ['HOME']
-username = 'jc9361'
-password = 'evo9gsrSE'
+
+username = input("GITHUB USERNAME: ")
+password = input("GITHUB PASSWORD: ")
+
+# username = 'username'
+# password = 'password'
 
 clear_display()
 

@@ -38,7 +38,6 @@ def clear_display():
 clear_display()
 
 
-
     ###################
     # LOGIN TO GITHUB #
     ###################
@@ -118,6 +117,7 @@ os.system(f'git remote add origin {repo_address}')
 print(f'REPO "{repo_name}" SUCCESSFULLY LINKED TO REMOTE BRANCH.')
 print(f"Repository address: {repo_address}\n")
 print(f'READY FOR FIRST COMMIT...\n')
+
 
     ######################
     # COMPLETION MESSAGE #

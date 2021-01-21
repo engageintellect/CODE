@@ -59,17 +59,14 @@ infection_rate = float(cases)/float(population)*100
 death_rate = float(deaths)/float(cases)*100
 population_death = float(deaths)/float(population)*100
 
-# PRINT DATA
-print("   ▄▄▄   ▄▄▄▄  ▄    ▄ ▄▄▄▄▄  ▄▄▄▄          ▄▄▄     ▄▄▄▄")
-print(" ▄▀   ▀ ▄▀  ▀▄ ▀▄  ▄▀   █    █   ▀▄          █    █▀  ▀▄")
-print(" █      █    █  █  █    █    █    █          █    █▄  ▄█")
-print(" █      █    █  ▀▄▄▀    █    █    █  ▀▀▀     █     ▀▀▀ █")
-print("  ▀▄▄▄▀  █▄▄█    ██   ▄▄█▄▄  █▄▄▄▀         ▄▄█▄▄  ▀▄▄▄▀")
+# PRINT DISPLAY 
+os.system('figlet COVID-19')
 print("\n")
 print(" (data scraped from www.worldometers.info/coronavirus/) ")
 print("\n")
 time.sleep(2)
 os.system('clear')
+
 
 print('CURRENT COVID-19 STATUS:')
 time.sleep(1)

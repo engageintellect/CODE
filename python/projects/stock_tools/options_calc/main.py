@@ -21,8 +21,8 @@ def call_option():
     print("\n")
     print(f'PREMIUM:            ${premium_price * 100}')
     print(f'BREAK EVEN:         ${premium_price + strike_price}')
-    print(f'[ POTENTIAL LOSS:     ${premium_price * 100} ]')
-    print(f'[ POTENTIAL GAIN:     ${profit} ]')
+    print(f'POTENTIAL LOSS:     ${premium_price * 100}')
+    print(f'POTENTIAL GAIN:     ${profit}')
  
 def put_option():
     display()

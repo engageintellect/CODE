@@ -3,7 +3,14 @@ github.com/Knetic/govaluate v1.5.0 h1:L4MyqdJSld9xr2eZcZHCWLfeIX2SBjqrwIKG1pcm/+
 github.com/Knetic/govaluate v1.5.0/go.mod h1:r7JcOSlj0wfOMncg0iLm8Leh48TZaKVeNIfJntJ2wa0=
 
 go.sum database tree
+<<<<<<< HEAD
 3600704
 Xu0QwSoz/WH97RQNBuPeFQhgShl9lsDxLaWyn2KGKX8=
 
 — sum.golang.org Az3grlqA4LQFNY9Qtp9sK/d9QHETcTJTE7sYPouP6eO15GJvW4ZMGrS68X1c77WGSzkVhkgBiytP1jMrGFaZObS2nwM=
+=======
+3522500
+heKpe1rSjSpP6V/xfX3mGOaFRetRBfIGVTl8cFnFs24=
+
+— sum.golang.org Az3grvBrJTfmT7ZFYGv1w8wQNwlCriZ2NGZrrxkHs/sDM1zSR8pyQu8O+8kSdwht0B1rdDtazqN7yNPJBkgjbonk1QE=
+>>>>>>> 1b2e896e4443014714a0d3adb9e4968cc37d50b6

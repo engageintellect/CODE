@@ -13,16 +13,22 @@ def main():
     print('\n')
     
     ticker = str(input("Input ticker: "))
-    if ticker != 'q':
+    
+    while ticker != 'q':
         timeframe = str(input("Choose timeframe: "))
+        os.system('clear')
+        output = subprocess.getoutput(f'curl -s rate.sx/{ticker}@{timeframe}')
+        print(output)
+        usr_continue = input("PRESS ENTER TO CONTINUE > ")
+        if usr_continue == '':
+            pass
+        else:
+            os.system('clear')
+            quit()
+        main()
     else:
         os.system('clear')
         quit()
-
-    
-    os.system('clear')
-    output = subprocess.getoutput(f'curl -s rate.sx/{ticker}@{timeframe}')
-    print(output)
 
 
 

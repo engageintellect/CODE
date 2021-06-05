@@ -13,9 +13,9 @@ import time
 public_client = cbpro.PublicClient()
 
 # USER ACCOUNT
-key = 'KEY'
-b64secret = 'SECRET'
-passphrase = 'PASS'
+key = '2851606201d8765e5f91a93cd710707b'
+b64secret = 'DVYqJXYxdaiinH7sTeWsTV5alpYRy2jtT/5P3xFbh96OTuDcVjdmmBKPbQMv7sWuGWQM88Ho9O/L/oIn50Ip1g=='
+passphrase = '5behhxfij45'
 auth_client = cbpro.AuthenticatedClient(key, b64secret, passphrase)
 
 
@@ -148,6 +148,7 @@ def menu():
             for x in y:
                 print(f"{x.upper()+':' :<16}  {y[x]}")
                 # print(x.upper(), ': ',  y[x])
+            print(requests.get(f'https://rate.sx/{choose_asset}').text)
         # SEARCH
         elif usr_input == '2':
             display()

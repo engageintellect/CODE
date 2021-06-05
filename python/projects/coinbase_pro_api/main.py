@@ -13,9 +13,9 @@ import time
 public_client = cbpro.PublicClient()
 
 # USER ACCOUNT
-key = 'API KEY'
+key = 'KEY'
 b64secret = 'SECRET'
-passphrase = 'PASSPHRASE'
+passphrase = 'PASS'
 auth_client = cbpro.AuthenticatedClient(key, b64secret, passphrase)
 
 
@@ -50,7 +50,8 @@ holdings = {
 
 def show_holdings(wallet):
     for x in auth_client.get_account(wallet):
-        print(x, ': ', auth_client.get_account(wallet)[x])
+        print(f'{x:<12} ::: {auth_client.get_account(wallet)[x]}')
+        # print(x, ': ', auth_client.get_account(wallet)[x])
 
 
 
@@ -145,7 +146,8 @@ def menu():
             y = auth_client.get_account(holdings[f'{choose_asset}'])
             display()
             for x in y:
-                print(x.upper(), ': ',  y[x])
+                print(f"{x.upper()+':' :<16}  {y[x]}")
+                # print(x.upper(), ': ',  y[x])
         # SEARCH
         elif usr_input == '2':
             display()

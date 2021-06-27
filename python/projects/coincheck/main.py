@@ -5,13 +5,14 @@ import subprocess
 import os
 
 
-
-def main():
-
+def display():
     os.system('clear')
     os.system('figlet coincheck')
     print('\n')
-    
+
+
+def main():
+    display()
     ticker = str(input("Input ticker: "))
     
     while ticker != 'q':

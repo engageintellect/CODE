@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>FA HOME</title>
+
+        <!-- STYLE -->
+        <style>
+            header {font-family:helvetica;}
+            body {font-family:helvetica;}
+
+
+
+            
+            .half_n_half{
+            display:grid;
+            grid-template-columns: 50% 50%;
+            grid-column-gap:1em;
+            grid-row-gap:1em;
+            }
+
+            .half_n_half > div{
+            padding:1em;
+            background:#ffffff;
+
+            }
+
+            .split_header{
+            display:grid;
+            grid-template-columns: 60% 40%;
+            grid-column-gap:1em;
+            grid-row-gap:1em;
+            }
+
+            .split_header > div{
+            padding:1em;
+            background:#ffffff;
+
+            }
+
+            .split_footer{
+            display:grid;
+            grid-template-columns: 50% 50%;
+            grid-column-gap:1em;
+            grid-row-gap:1em;
+            padding:1em;
+            background:#ffffff;
+            }
+
+            .collage{
+            
+            display:grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 33% 33% 33%;
+            grid-column-gap:1em;
+            grid-row-gap:1em;
+            }      
+
+    
+            .collage > div{
+            background:#ffffff;
+            padding:1em;
+            }      
+    
+    
+            <!-- .collage > div:nth-child(odd){ -->
+              <!-- background:#ffffff; -->
+            <!-- } -->      
+        </style>
+
+
+
+        <!-- HEADER -->
+        <header style="font-size:32px">
+            <center><img src="./photos/icons/fa_logo.png.jpg"></img></center>
+        </header>
+        <body>
+        <div style="padding:1em;" class="split_header">
+            <div style="border-style:solid">
+                <center><b><u>NOTIFICATIONS</b></u></center>
+                <p>
+                - CHECK WORKDAY FOR ANY NEW TASKS<br>
+                - SUBMIT TIMECLOCK HOURS DAILY<br>
+                - STAY UP TO DATE WITH FA_LIVE<br>
+                </p>
+           </div>
+            <div style="border-style:solid">
+                <center>
+
+                    <b><u>USEFUL LINKS</b></u><br>
+                    <p>
+                    <a href='https://google.com'>THIS IS A LINK</a><br>
+                    <a href='https://google.com'>THIS IS A LINK</a><br>
+                    <a href='https://google.com'>THIS IS A LINK</a><br>
+                    <a href='https://google.com'>THIS IS A LINK</a><br>
+                    <a href='https://google.com'>THIS IS A LINK</a><br>
+                    </p>
+                </center>
+
+                <!-- <form action="https://youtube.com"> -->
+                <!--     <input type="submit" value="YOUTUBE"></form> -->
+
+
+            </div>
+        </div>
+        <br>
+
+
+        <div> 
+        <center>
+            <h1 onclick="testfunc();">FA APPS
+            <script>
+                function testfunc(){
+                    alert("Please select a link from the grid...");
+                    <!-- let usr_input = prompt("enter a url: "); -->
+                    <!-- console.log(usr_input); -->
+                    <!-- window.location.href = usr_input; -->
+                }
+            </script>
+            </h1>
+
+
+        </center>
+        </div> 
+       
+        <!-- TILES --> 
+        <div style="padding:1em;" class="collage">
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>WORKDAY</b></center><br>
+                <a href='https://www.myworkday.com/wday/authgwy/firstam/login.htmld'>
+                <center><img src="./photos/icons/workday.png" style= "width:50%; height:50%'"></img></center>
+            </a>
+            </div>
+
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>MYFA BENIFITS</b></center><br>
+                <a href='https://firstam.service-now.com/myfa'>
+                <center><img src="./photos/icons/money.png" style= "width:50%; height:50%'"></img></center>
+            </a>
+            </div>
+
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>TRAINING</b></center><br>
+                <a href='https://performancemanager4.successfactors.com/sf/start#Shell-home'>
+                <center><img src="./photos/icons/learn.png" style= "width:50%; height:50%'"></img></center>
+            </a>
+            </div>
+        
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>FA LIVE</b></center><br>
+                <a href='https://www.falive.net/a/falive/home/'>
+                <center><img src="./photos/icons/news.png" style= "width:50%; height:50%'"></img></center>
+            </a>
+            </div>
+        
+
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>PRESS RELEASE</b></center><br>
+                <a href='https://www.firstam.com/mortgagesolutions/news/press-releases.html'>
+                <center><img src="./photos/icons/press.png" style= "width:50%; height:50%'"></img></center>
+            </a>
+            </div>
+
+
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>INFO</b></center><br>
+                <a href='https://firstam.service-now.com/myfa'>
+                <center><img src="./photos/icons/info.png" style= "width:50%; height:50%'"></img></center>
+            </a>
+            </div>
+
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>TEAMS</b></center><br>
+                <a href='https://www.microsoft.com/en-us/microsoft-teams/log-in'>
+                <center><img src="./photos/icons/teams.png" style= "width:50%; height:50%'"></img></center>
+            </a>
+            </div>
+
+
+
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>OUTLOOK EMAIL</b></center><br>
+                <a href='https://outlook.office365.com/mail/inbox'>
+                <center><img src="./photos/icons/outlook.png" style= "width:50%; height:50%'"></img></center>
+            </a>
+            </div>
+
+            <div style="border-style:solid">
+                <center style="font-size:24px"><b>GAOLS</b></center><br>
+                <center><img src="./photos/icons/clock.png" style= "width:50%; height:50%" onclick="myFunction();"></img></center>
+                <script>
+                   function myFunction() {
+                       
+                       alert("Comming soon...")
+                   }
+                </script>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+
+        
+        <!-- DEVICE SETUP -->
+        <center><h1>SETUP</h1></center>
+
+        
+        <!-- SETUP INSTRUCTIONS -->
+        <div style="padding:1em;" class="half_n_half">
+            <div style="padding:1em; border-style:solid;" >
+                <p>
+                <center><b>DEVICE SETUP</b></center>
+                </p>
+                <div>
+                1: LOGIN TO MACHINE
+                </div>
+            
+                <div>
+                2: JOIN VPN USING 2FA KEY 
+                </div>
+            
+                <div>
+                3: LOGIN TO SERVICES
+                </div>
+
+                <div>
+                4: SEE VIDEO FOR TUTORIAL
+                </div>
+
+                <div>
+                    <a href = "mailto: abc@example.com">Send Email</a>
+
+                
+                </div>
+
+            </div>
+            <div style="padding:; border-style:solid;" >
+                <p>
+                <center><b>VPN/SERVICES SETUP</b></center>
+                </p>
+                <div>
+                1: LOGIN TO MACHINE
+                </div>
+            
+                <div>
+                2: JOIN VPN USING 2FA KEY 
+                </div>
+            
+                <div>
+                3: LOGIN TO SERVICES
+                </div>
+
+                <div>
+                4: SEE VIDEO FOR TUTORIAL
+                </div>
+            </div>
+        </div>
+
+        <div style="padding:1em;" class="half_n_half">
+
+            <!-- DEVICE SETUP VIDEO -->
+            <div style="padding:1em;">
+                <center>
+                <iframe width="400" height="200" style="border-style:solid;"
+                    src="https://www.youtube.com/embed/NhvMHXDxWE4">
+                    </iframe>
+                </center>
+            </div>
+
+            <!-- SERVICES SETUP VIDEO -->
+            <div style="padding:1em;">
+                <center>
+                <iframe width="400" height="200" style="border-style:solid;"
+                    src="https://www.youtube.com/embed/1xu-3t0BHFo">
+                    </iframe>
+                </center>
+            </div>
+
+
+        </div>
+
+
+
+        <div>
+            <h1>
+                <center>HISTORY</center>
+            </h1>
+        </div>
+
+
+        <div class="split_footer">
+            <center><iframe width="900" height="600" style="border-style:solid;"
+                    src="https://www.youtube.com/embed/GX2qvG9nGqc">
+                </iframe></center>
+        </div>
+
+
+        <!-- MORE CONTENT -->
+        <div>
+            <h1>
+                <center>
+                    MORE CONTENT
+                </center>
+            </h1>
+        </div>
+            <div style="padding:1em" class= "split_footer">
+                <div style="border-style:solid">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Pellentesque ex lorem, imperdiet tempor tempus in, sodales lacinia velit. 
+                    Nam aliquet dolor vitae nulla ultrices rhoncus at eu urna. Ut ac odio ac turpis dictum placerat. 
+                    Nam lacinia lacinia quam, at malesuada libero tincidunt nec. Suspendisse dapibus eget lectus ac volutpat. Donec eget tellus at metus facilisis porta. 
+                    Nullam elementum arcu a volutpat tempus. Mauris convallis nunc lorem, id hendrerit urna tincidunt at. 
+                    Nulla urna orci, maximus eget eros tincidunt, ultricies pellentesque odio. 
+                    Vivamus in ante id lectus maximus malesuada at vel metus. 
+                    In hac habitasse platea dictumst. Sed sed mi maximus, imperdiet lectus sit amet, iaculis sapien. 
+                    Mauris accumsan metus metus, in dapibus nulla venenatis quis. Maecenas non sagittis urna. Morbi scelerisque quis nunc ac mattis.
+                    Aliquam erat volutpat. Ut aliquet lacus vitae feugiat malesuada. Integer sit amet erat elementum, tristique augue eget, suscipit purus. Nulla tellus enim, lacinia sed consequat vitae, pulvinar non odio. Donec ut urna posuere, ultrices ante vitae, dignissim dui. Pellentesque scelerisque diam venenatis libero pellentesque tempus. Sed finibus lectus nec suscipit ornare. Phasellus at porta est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed mauris ante, sagittis eu neque ac, elementum consequat magna. Suspendisse posuere, metus sit amet auctor ultricies, tellus erat rutrum dolor, quis tristique eros lectus in sapien. Duis velit nisi, sagittis eu tristique vel, aliquet sed arcu. Suspendisse potenti. Suspendisse metus nibh, vehicula nec diam id, ornare placerat arcu. Morbi luctus elementum ornare. Cras porta sem nunc, a scelerisque nunc fermentum in.
+                </div>
+                
+                <div style="border-style:solid">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Pellentesque ex lorem, imperdiet tempor tempus in, sodales lacinia velit. 
+                    Nam aliquet dolor vitae nulla ultrices rhoncus at eu urna. Ut ac odio ac turpis dictum placerat. 
+                    Nam lacinia lacinia quam, at malesuada libero tincidunt nec. Suspendisse dapibus eget lectus ac volutpat. Donec eget tellus at metus facilisis porta. 
+                    Nullam elementum arcu a volutpat tempus. Mauris convallis nunc lorem, id hendrerit urna tincidunt at. 
+                    Nulla urna orci, maximus eget eros tincidunt, ultricies pellentesque odio. 
+                    Vivamus in ante id lectus maximus malesuada at vel metus. 
+                    In hac habitasse platea dictumst. Sed sed mi maximus, imperdiet lectus sit amet, iaculis sapien. 
+                    Mauris accumsan metus metus, in dapibus nulla venenatis quis. Maecenas non sagittis urna. Morbi scelerisque quis nunc ac mattis.
+                    Aliquam erat volutpat. Ut aliquet lacus vitae feugiat malesuada. Integer sit amet erat elementum, tristique augue eget, suscipit purus. Nulla tellus enim, lacinia sed consequat vitae, pulvinar non odio. Donec ut urna posuere, ultrices ante vitae, dignissim dui. Pellentesque scelerisque diam venenatis libero pellentesque tempus. Sed finibus lectus nec suscipit ornare. Phasellus at porta est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed mauris ante, sagittis eu neque ac, elementum consequat magna. Suspendisse posuere, metus sit amet auctor ultricies, tellus erat rutrum dolor, quis tristique eros lectus in sapien. Duis velit nisi, sagittis eu tristique vel, aliquet sed arcu. Suspendisse potenti. Suspendisse metus nibh, vehicula nec diam id, ornare placerat arcu. Morbi luctus elementum ornare. Cras porta sem nunc, a scelerisque nunc fermentum in.
+                </div>
+            </div>
+    </body>
+</html>
+

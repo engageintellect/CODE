@@ -3,6 +3,7 @@
 
 import os
 import subprocess
+from time import sleep
 
 screen_res = 0
 
@@ -21,16 +22,20 @@ def get_resolution():
 def record_screen():
     file_out = input("NAME VIDEO OUTPUT: ")
     if file_out != 'q':
-        pass
+        res = get_resolution()
+        path = subprocess.getoutput('echo $HOME')
+        os.chdir(path)
+        cmd = f'ffmpeg -f x11grab -s {res} -r 25 -i :0.0 {file_out}.mp4'
+        os.system(cmd)
+
+        clear_screen(); print(f'SAVING FILE {file_out}'); sleep(1)
+        os.system('clear')
     else:
         os.system('clear')
         quit()
 
-    res = get_resolution()
-    path = subprocess.getoutput('echo $HOME')
-    os.chdir(path)
-    cmd = f'ffmpeg -f x11grab -s {res} -r 25 -i :0.0 {file_out}.mp4'
-    os.system(cmd)
+
+
 
 
 # MAIN RUN

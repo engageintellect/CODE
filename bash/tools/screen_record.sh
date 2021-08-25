@@ -19,7 +19,7 @@ record_screen()
     else
         cd
         ffmpeg -f x11grab -s $res -r 25 -i :0.0 $filename.mp4
-        clear && echo "SAVING VIDEO '$filename'" && sleep 1
+        clear_screen && echo "SAVING VIDEO '$filename'" && sleep 1
         clear
     fi
 }

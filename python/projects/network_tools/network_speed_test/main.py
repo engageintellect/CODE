@@ -8,18 +8,21 @@ st=speedtest.Speedtest()
 
 def clear():
     subprocess.call('clear', shell=True)
+    subprocess.call('figlet "NET-SPEED"', shell=True)
+    print('\n')
 
 def scan():
     clear()
     
+    sleep(1)
     print("STARTING SCAN...")
     sleep(1)
     servernames = []
     
     print("FINDING FASTEST SERVER...")
     server = st.get_best_server(servernames)
-    print(f"SERVER=[{server['host']}]")
-    print(f"LATENCY=[{server['latency']}]")
+    print(f"SERVER=[ {server['host']} ]")
+    print(f"LATENCY=[ {server['latency']} ]")
     
     print("MEASURING DOWNLOAD SPEED...")
     download = float(st.download()/(1024*1024))
@@ -42,5 +45,5 @@ def scan():
     print("PING:      ", "%.2f" % ping, "ms")
 
 
-
-scan()
+if __name__ == "__main__":
+    scan()

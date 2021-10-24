@@ -6,6 +6,8 @@ import sys
 
 os.system('clear')
 
+def display():
+    os.system('clear && figlet "COVID-19 STATUS"')
     
 # BEAUTIFUL SOUP SCRAPE
 URL = 'https://www.worldometers.info/coronavirus/#countries'
@@ -67,8 +69,8 @@ print("\n")
 time.sleep(2)
 os.system('clear')
 
-
-print('CURRENT COVID-19 STATUS:')
+display()
+# print('CURRENT COVID-19 STATUS:')
 time.sleep(1)
 print('\n')
 

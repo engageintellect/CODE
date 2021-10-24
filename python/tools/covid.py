@@ -67,12 +67,13 @@ print("\n")
 time.sleep(2)
 os.system('clear')
 
+def display():
+    os.system('clear')
+    os.system('figlet "COVID-19"')
+    os.system('figlet "STATUS"')
+    time.sleep(1)
 
-print('CURRENT COVID-19 STATUS:')
-time.sleep(1)
-print('\n')
-
-
+display()
 #print(us_data[0:14])
 #quit()
 

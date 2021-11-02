@@ -12,6 +12,8 @@ from termcolor import colored
 from time import sleep
 
 
+
+
 def display():
     os.system('clear')
     os.system('figlet "Pi - TEMP"')
@@ -19,6 +21,7 @@ def display():
     print('\n')
 
 
+# CPU_TEMP
 def get_temp():
     temp = subprocess.getoutput('/opt/vc/bin/vcgencmd measure_temp')
     temp = float(temp.replace('temp=', '').replace("'C", ''))
@@ -30,6 +33,7 @@ def get_temp():
     return tempf
    
 
+# CPU_HZ
 def get_cpu_speed_hz():
     cpu_speed = subprocess.getoutput('vcgencmd measure_clock arm') \
             .replace('frequency', '').replace('(48)=', '')
@@ -37,6 +41,7 @@ def get_cpu_speed_hz():
     return cpu_speed
 
 
+# CPU_GHZ
 def get_cpu_speed_ghz():
     cpu_speed = subprocess.getoutput('vcgencmd measure_clock arm') \
             .replace('frequency', '').replace('(48)=', '')
@@ -53,7 +58,7 @@ def main():
         print(get_cpu_speed_hz())
         print(get_cpu_speed_ghz())
         print('\n')
-        sleep(3)
+        sleep(5)
         if x != 20:
             continue
         else:

@@ -19,6 +19,7 @@ def display():
     os.system('figlet "Pi - TEMP"')
     print('******************************************')
     print('\n')
+    sleep(1)
 
 
 # CPU_TEMP
@@ -49,6 +50,7 @@ def get_cpu_speed_ghz():
     return cpu_speed
 
 
+# MAIN
 def main():
     display()
     x = 0

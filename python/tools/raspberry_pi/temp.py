@@ -68,9 +68,8 @@ def main():
     x = 0
     while True:
         x=x+1
-        print(f'| {get_date_time()} | {get_temp()} | {get_cpu_speed_hz()} | {get_cpu_speed_ghz()} |')
-        print('\n')
-        sleep(5)
+        print(f'| {get_date_time()} | {get_temp()} | {get_cpu_speed_hz()} | {get_cpu_speed_ghz()}')
+        sleep(1)
         if x != 20:
             continue
         else:

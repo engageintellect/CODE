@@ -18,12 +18,7 @@ def INTERFACE_NAME():
     interface_end = interface_chop.index('type:')
     print('NETWORK INTERFACE =', interface_chop[:int(interface_end)])
 
-print(" _")
-print("(_)_ __        ___  ___ __ _ _ __  _ __   ___ _ __")
-print("| | '_ \ _____/ __|/ __/ _` | '_ \| '_ \ / _ \ '__|")
-print("| | |_) |_____\__ \ (_| (_| | | | | | | |  __/ |")
-print("|_| .__/      |___/\___\__,_|_| |_|_| |_|\___|_|")
-print("  |_|")
+os.system('figlet "ip-scanner"')
 print("\n")
 INTERFACE_NAME()
 print('DEVICES ON NETWORK:')
@@ -85,6 +80,12 @@ if CMD_LENGTH > 8:
     s9 = s9.split()
     s9 = s9[0]
 
+if CMD_LENGTH > 9:
+    s10 = str(cmd[9])
+    s10 = s10.split()
+    s10 = s10[0]
+
+
 print("\n")
 usr_input = input('ENTER IP TO SEARCH: ')
 
@@ -110,6 +111,9 @@ if usr_input == 8:
     os.system('nmap -Pn ' + s8)
 if usr_input == 9:
     os.system('nmap -Pn ' + s9)
+if usr_input == 10:
+    os.system('nmap -Pn ' + s10)
+
 
 
 else:

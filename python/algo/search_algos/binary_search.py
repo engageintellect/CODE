@@ -15,4 +15,7 @@ def BinarySearch(lys, val):
 
 
 
-print(BinarySearch([10,20,30,40,50], 40))
+
+
+search_list = [10,20,30,40,50]
+print(BinarySearch(search_list, 40))

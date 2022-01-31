@@ -23,7 +23,7 @@ class User{
     }   
 }
 
-var userOne = new User("josh", "jc9361@gmail.com")
+var userOne = new User("josh", "josh@gmail.com")
 var userTwo = new User("jim", "jim@gmail.com")
 
 userOne.login().update_score().update_score().logout();

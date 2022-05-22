@@ -1,0 +1,29 @@
+
+.header {
+  background-color: #282c34;
+  min-height: 40vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 1rem;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+.navbar_link {
+  color: #282c34;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid #00000000;
+  transition: 0.2s;
+}
+
+.navbar_link:hover {
+  border-bottom: 4px solid #0c6af3;
+  color: #282c34;
+  transition: 0.5s;
+  text-shadow: 5px 5px 5px #0c6af3;
+}
+
+

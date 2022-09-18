@@ -73,22 +73,25 @@ display()
 # print('CURRENT COVID-19 STATUS:')
 time.sleep(1)
 print('\n')
-
-
 #print(us_data[0:14])
 #quit()
 
 # DISPLAY RESULTS
 
 if us_data[10] == "North America":
-    print('        =====[ US CASES ]=====        ')
+    print('#-------------------------------------------')
+    print('# US CASES')
+    print('#-------------------------------------------')
     print('INFECTED:                   ' + us_data[0])
     print('DEATHS:                     ' + us_data[1])
     print('RECOVERED:                  ' + us_data[2])
     print('ACTIVE CASES                ' + us_data[3])
     print('CRITIAL CASES               ' + us_data[4])
     print('TEST GIVEN:                 ' + us_data[7])
-    print('        =====[ US STATS ]======        ')
+
+    print('#-------------------------------------------')
+    print('# US STATS')
+    print('#-------------------------------------------')
     print('US POPULATION:              ' + us_data[9])
     print('US INFECTION RATE:         ', '%', infection_rate)
     print('US DEATH RATE:             ', '%', death_rate)
@@ -97,7 +100,10 @@ if us_data[10] == "North America":
 
 elif us_data[11] == "North America":
     print('11 is NORTH AMERICA')
-    print('        =====[ US CASES ]=====        ')
+
+    print('#-------------------------------------------')
+    print('# US CASES')
+    print('#-------------------------------------------')
     print('INFECTED:                   ' + us_data[0])
     print('NEW CASES:                  ' + us_data[1])
     print('DEATHS:                     ' + us_data[2])
@@ -105,7 +111,10 @@ elif us_data[11] == "North America":
     print('ACTIVE CASES                ' + us_data[4])
     print('CRITIAL CASES               ' + us_data[5])
     print('TEST GIVEN:                 ' + us_data[8])
-    print('        =====[ US STATS ]=====        ')
+
+    print('#-------------------------------------------')
+    print('# US STATS')
+    print('#-------------------------------------------')
     print('US POPULATION:              ' + us_data[10])
     print('US INFECTION RATE:         ', '%',float(us_data[0].replace(',',''))/float(us_data[10].replace(',',''))*100)
     print('US DEATH RATE:             ', '%',float(us_data[2].replace(',',''))/float(us_data[0].replace(',',''))*100)
@@ -114,7 +123,10 @@ elif us_data[11] == "North America":
 
 elif us_data[12] == "North America":
     print('12 is NORTH AMERICA')
-    print('        =====[ US CASES ]=====        ')
+
+    print('#-------------------------------------------')
+    print('# US CASES')
+    print('#-------------------------------------------')
     print('INFECTED:                   ' + us_data[0])
     print('NEW CASES:                  ' + us_data[1])
     print('DEATHS:                     ' + us_data[2])
@@ -123,7 +135,10 @@ elif us_data[12] == "North America":
     print('ACTIVE CASES                ' + us_data[5])
     print('CRITIAL CASES               ' + us_data[6])
     print('TEST GIVEN:                 ' + us_data[9])
-    print('        =====[ US STATS ]=====        ')
+
+    print('#-------------------------------------------')
+    print('# US STATS')
+    print('#-------------------------------------------')
     print('US POPULATION:              ' + us_data[11])
     print('US INFECTION RATE:         ', '%',float(us_data[0].replace(',',''))/float(us_data[11].replace(',',''))*100)
     print('US DEATH RATE:             ', '%',float(us_data[2].replace(',',''))/float(us_data[0].replace(',',''))*100)
@@ -131,7 +146,10 @@ elif us_data[12] == "North America":
     print('\n')
 
 elif us_data[13] == "North America":
-    print('        =====[ US CASES ]=====        ')
+
+    print('#-------------------------------------------')
+    print('# US CASES')
+    print('#-------------------------------------------')
     print('INFECTED:                   ' + us_data[0])
     print('NEW CASES:                  ' + us_data[1])
     print('DEATHS:                     ' + us_data[2])
@@ -140,7 +158,10 @@ elif us_data[13] == "North America":
     print('ACTIVE CASES                ' + us_data[6])
     print('CRITIAL CASES               ' + us_data[7])
     print('TEST GIVEN:                 ' + us_data[10])
-    print('        =====[ US STATS ]=====        ')
+
+    print('#-------------------------------------------')
+    print('# US STATS')
+    print('#-------------------------------------------')
     print('US POPULATION:              ' + us_data[12])
     print('US INFECTION RATE:         ', '%',float(us_data[0].replace(',',''))/float(us_data[12].replace(',',''))*100)
     print('US DEATH RATE:             ', '%',float(us_data[2].replace(',',''))/float(us_data[0].replace(',',''))*100)
@@ -149,17 +170,22 @@ elif us_data[13] == "North America":
 
 
 else:
-    print('US LIST FUCKED UP...CODE A SLUTION FOR DATA FLUCTUATIONS ON WORLDOMETERS.COM...')
+    print('US LIST MESSED UP...CODE A SLUTION FOR DATA FLUCTUATIONS ON WORLDOMETERS.COM...')
 
 print("\n")
-print('        =====[ WORLD CASES ]=====        ')
+
+print('#-------------------------------------------')
+print('# WORLD CASES')
+print('#-------------------------------------------')
 print('INFECTED:                   ' + world_data[0])
 print('NEW CASES                   ' + world_data[1])
 print('DEATHS:                     ' + world_data[2])
 print('NEW DEATHS:                 ' + world_data[3])
 print('RECOVERED:                  ' + world_data[4])
 print('ACTIVE CASES:               ' + world_data[6])
-print('        =====[ WORLD STATS ]=====        ')
+print('#-------------------------------------------')
+print('# WORLD STATS')
+print('#-------------------------------------------')
 print('WORLD POPULATION:           ' + '7,800,000,000')
 print('WORLD INFECTION RATE:      ', '%', float(world_data[0].replace(',',''))/world_pop*100)
 world_pop_dead =  str(float(world_data[2].replace(',',''))/world_pop*100)

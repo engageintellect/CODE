@@ -59,7 +59,7 @@ def run_scanner(threads, mode):
     for thread in thread_list:
         thread.join()
 
-    if len(open_ports) < 1:
+    if len(open_ports) < 0:
         print("\nNO OPEN PORTS")
     else:
         print(f"\nOpen ports: {open_ports}")
